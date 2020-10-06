@@ -2,10 +2,12 @@
 from random import randint
 from time import sleep 
 
+"""Holds what the user enters"""
 def get_user_guess():
   guess = int(input("Guess a number: "))
   return guess;
 
+"""Rolls die and identifies if user guess and die value equal or not"""
 def roll_dice(number_of_sides):
   first_roll = randint(1, number_of_sides)
   second_roll = randint(1, number_of_sides)
@@ -30,4 +32,5 @@ def roll_dice(number_of_sides):
     else:
         print("You lost, try again")
 
+"""Enter how many sides the individual die has. Example: A normal 6 sided die would be roll_dice(6) and a 12 sided die would be roll_dice(12)"""
 roll_dice(6)
